@@ -192,70 +192,71 @@
     </section>
 
     <!-- Process Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 lg:px-8">
-            <div class="text-center mb-16 reveal">
-                <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">Процесс работы</span>
-                <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">От запроса к результату</h2>
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center mb-16 reveal">
+            <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">Процесс работы</span>
+            <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">От запроса к результату</h2>
+        </div>
+
+        <!-- Сетка из 3 колонок на десктопе, 2 на планшете -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Шаг 1 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal border border-gray-100">
+                <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-primary font-heading font-bold text-2xl">1</span>
+                </div>
+                <h4 class="font-heading font-bold text-xl text-gray-900 mb-3 text-center">Обращение заказчика</h4>
+                <p class="text-gray-600 text-center leading-relaxed">Свяжитесь с нами удобным способом</p>
             </div>
 
-            <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <!-- Шаг 1 -->
-                <div class="process-step text-center reveal">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-phone-alt text-white"></i>
-                    </div>
-                    <h4 class="font-heading font-semibold mb-2">Обращение заказчика</h4>
-                    <p class="text-gray-600 text-sm">Свяжитесь с нами удобным способом</p>
+            <!-- Шаг 2 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal border border-gray-100" style="transition-delay: 0.1s;">
+                <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-primary font-heading font-bold text-2xl">2</span>
                 </div>
+                <h4 class="font-heading font-bold text-xl text-gray-900 mb-3 text-center">Анализ отходов</h4>
+                <p class="text-gray-600 text-center leading-relaxed">Проводим детальный анализ</p>
+            </div>
 
-                <!-- Шаг 2 -->
-                <div class="process-step text-center reveal" style="transition-delay: 0.1s;">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-search text-white"></i>
-                    </div>
-                    <h4 class="font-heading font-semibold mb-2">Анализ отходов</h4>
-                    <p class="text-gray-600 text-sm">Проводим детальный анализ</p>
+            <!-- Шаг 3 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal border border-gray-100" style="transition-delay: 0.2s;">
+                <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-primary font-heading font-bold text-2xl">3</span>
                 </div>
+                <h4 class="font-heading font-bold text-xl text-gray-900 mb-3 text-center">Согласование</h4>
+                <p class="text-gray-600 text-center leading-relaxed">Заключение договора</p>
+            </div>
 
-                <!-- Шаг 3 -->
-                <div class="process-step text-center reveal" style="transition-delay: 0.2s;">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-file-signature text-white"></i>
-                    </div>
-                    <h4 class="font-heading font-semibold mb-2">Согласование</h4>
-                    <p class="text-gray-600 text-sm">Заключение договора</p>
+            <!-- Шаг 4 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal border border-gray-100" style="transition-delay: 0.3s;">
+                <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-primary font-heading font-bold text-2xl">4</span>
                 </div>
+                <h4 class="font-heading font-bold text-xl text-gray-900 mb-3 text-center">Транспортирование</h4>
+                <p class="text-gray-600 text-center leading-relaxed">Вывоз отходов</p>
+            </div>
 
-                <!-- Шаг 4 (Транспортирование) - теперь в едином стиле -->
-                <div class="process-step text-center reveal" style="transition-delay: 0.3s;">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-truck text-white"></i>
-                    </div>
-                    <h4 class="font-heading font-semibold mb-2">Транспортирование</h4>
-                    <p class="text-gray-600 text-sm">Вывоз отходов</p>
+            <!-- Шаг 5 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal border border-gray-100" style="transition-delay: 0.4s;">
+                <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-primary font-heading font-bold text-2xl">5</span>
                 </div>
+                <h4 class="font-heading font-bold text-xl text-gray-900 mb-3 text-center">Обработка</h4>
+                <p class="text-gray-600 text-center leading-relaxed">Утилизация отходов</p>
+            </div>
 
-                <!-- Шаг 5 -->
-                <div class="process-step text-center reveal" style="transition-delay: 0.4s;">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-cogs text-white"></i>
-                    </div>
-                    <h4 class="font-heading font-semibold mb-2">Обработка</h4>
-                    <p class="text-gray-600 text-sm">Утилизация отходов</p>
+            <!-- Шаг 6 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal border border-gray-100" style="transition-delay: 0.5s;">
+                <div class="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-accent font-heading font-bold text-2xl">6</span>
                 </div>
-
-                <!-- Шаг 6 -->
-                <div class="process-step text-center reveal" style="transition-delay: 0.5s;">
-                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-check-double text-white"></i>
-                    </div>
-                    <h4 class="font-heading font-semibold mb-2">Документы</h4>
-                    <p class="text-gray-600 text-sm">Полный пакет документов</p>
-                </div>
+                <h4 class="font-heading font-bold text-xl text-gray-900 mb-3 text-center">Документы</h4>
+                <p class="text-gray-600 text-center leading-relaxed">Полный пакет документов</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- CTA Section -->
     <section class="py-20 bg-primary">
