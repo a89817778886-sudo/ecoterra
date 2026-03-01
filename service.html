@@ -200,6 +200,7 @@
             </div>
 
             <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Шаг 1 -->
                 <div class="process-step text-center reveal">
                     <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-phone-alt text-white"></i>
@@ -208,6 +209,7 @@
                     <p class="text-gray-600 text-sm">Свяжитесь с нами удобным способом</p>
                 </div>
 
+                <!-- Шаг 2 -->
                 <div class="process-step text-center reveal" style="transition-delay: 0.1s;">
                     <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-search text-white"></i>
@@ -216,6 +218,7 @@
                     <p class="text-gray-600 text-sm">Проводим детальный анализ</p>
                 </div>
 
+                <!-- Шаг 3 -->
                 <div class="process-step text-center reveal" style="transition-delay: 0.2s;">
                     <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-file-signature text-white"></i>
@@ -224,14 +227,16 @@
                     <p class="text-gray-600 text-sm">Заключение договора</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 shadow-lg text-center" style="text-align: center; margin-left: auto; margin-right: auto; width: 100%;">
-    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 relative z-10">
-        <span class="text-white font-heading font-bold">4</span>
-    </div>
-    <h4 class="font-heading font-semibold mb-2" style="text-align: center;">Транспортирование</h4>
-    <p class="text-gray-600 text-sm" style="text-align: center;">Вывоз отходов</p>
-</div>
+                <!-- Шаг 4 (Транспортирование) - теперь в едином стиле -->
+                <div class="process-step text-center reveal" style="transition-delay: 0.3s;">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-white"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold mb-2">Транспортирование</h4>
+                    <p class="text-gray-600 text-sm">Вывоз отходов</p>
+                </div>
 
+                <!-- Шаг 5 -->
                 <div class="process-step text-center reveal" style="transition-delay: 0.4s;">
                     <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-cogs text-white"></i>
@@ -240,6 +245,7 @@
                     <p class="text-gray-600 text-sm">Утилизация отходов</p>
                 </div>
 
+                <!-- Шаг 6 -->
                 <div class="process-step text-center reveal" style="transition-delay: 0.5s;">
                     <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-check-double text-white"></i>
@@ -343,64 +349,54 @@
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
     </script>
+
+    <!-- Единый блок исправлений для мобильной версии -->
     <style>
-    /* Исправление горизонтальной прокрутки на мобильных */
-    @media (max-width: 768px) {
-        body, html {
-            overflow-x: hidden;
-            max-width: 100%;
+        @media (max-width: 768px) {
+            /* Запрещаем горизонтальную прокрутку */
+            body, html {
+                overflow-x: hidden;
+                max-width: 100%;
+            }
+            
+            .container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                max-width: 100% !important;
+            }
+            
+            /* Выравнивание шагов по центру */
+            .grid.md\:grid-cols-3.lg\:grid-cols-6 {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 20px !important;
+            }
+            
+            .process-step {
+                width: 100% !important;
+                text-align: center !important;
+            }
+            
+            .process-step h4,
+            .process-step p {
+                text-align: center !important;
+            }
+            
+            /* Центрируем кружки */
+            .process-step .w-16.h-16 {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            /* Для карточек услуг */
+            .grid.md\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            
+            section {
+                overflow-x: hidden;
+            }
         }
-        
-        .container {
-            padding-left: 15px !important;
-            padding-right: 15px !important;
-            max-width: 100% !important;
-            overflow-x: hidden;
-        }
-        
-        /* Если у вас есть сетка (grid) - исправляем её */
-        .grid {
-            grid-template-columns: 1fr !important;
-            gap: 20px !important;
-        }
-        
-        /* Исправляем возможные широкие элементы */
-        [class*="grid"], 
-        [class*="flex"] {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-        
-        /* Убираем лишние отступы */
-        section {
-            overflow-x: hidden;
-        }
-    }
-</style>
-    <style>
-    /* Исправление для всех карточек с текстом */
-    @media (max-width: 768px) {
-        .bg-white.rounded-2xl.p-6.shadow-lg {
-            padding: 15px !important;
-            word-break: break-word !important;
-            overflow-wrap: break-word !important;
-            max-width: 100% !important;
-            box-sizing: border-box !important;
-        }
-        
-        /* Для заголовков */
-        .bg-white.rounded-2xl.p-6.shadow-lg h3 {
-            font-size: 1.1rem !important;
-            line-height: 1.3 !important;
-            white-space: normal !important;
-        }
-        
-        /* Для описания */
-        .bg-white.rounded-2xl.p-6.shadow-lg p {
-            font-size: 0.85rem !important;
-            white-space: normal !important;
-        }
-    }
-</style>
+    </style>
 </body>
 </html>
