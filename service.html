@@ -343,5 +343,39 @@
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
     </script>
+    <style>
+    /* Исправление горизонтальной прокрутки на мобильных */
+    @media (max-width: 768px) {
+        body, html {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        
+        .container {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            max-width: 100% !important;
+            overflow-x: hidden;
+        }
+        
+        /* Если у вас есть сетка (grid) - исправляем её */
+        .grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+        }
+        
+        /* Исправляем возможные широкие элементы */
+        [class*="grid"], 
+        [class*="flex"] {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Убираем лишние отступы */
+        section {
+            overflow-x: hidden;
+        }
+    }
+</style>
 </body>
 </html>
