@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги | ЭкоТерра - Экологические решения</title>
+    <meta name="description" content="Полный комплекс услуг по обращению с отходами III-V класса опасности, ликвидации свалок, рекультивации земель. Узнайте больше о наших услугах.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B5E20',
+                        secondary: '#2E7D32',
+                        light: '#4CAF50',
+                        accent: '#F57C00',
+                        gold: '#FFB300',
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+        .btn-primary { transition: all 0.3s ease; }
+        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(27, 94, 32, 0.4); }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #1B5E20; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .process-step { position: relative; }
+        .process-step::after { content: ''; position: absolute; top: 50%; right: -50%; width: 100%; height: 2px; background: #E0E0E0; transform: translateY(-50%); }
+        .process-step:last-child::after { display: none; }
+        @media (max-width: 768px) { .process-step::after { display: none; } }
+    </style>
+</head>
+<body class="font-body text-gray-800 antialiased">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading font-bold text-xl text-primary">ЭкоТерра</span>
+                        <p class="text-xs text-gray-500">Экологические решения</p>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="about.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">О компании</a>
+                    <a href="service.html" class="nav-link font-heading font-medium text-primary transition">Услуги</a>
+                    <a href="partners.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">Партнёры</a>
+                    <a href="doc.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">Документы</a>
+                    <a href="contact.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">Контакты</a>
+                    <a href="news.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">Новости</a>
+                </nav>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="tel:+79995433326" class="flex items-center space-x-2 text-primary hover:text-secondary transition">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-heading font-semibold">+7 (999) 543-33-26</span>
+                    </a>
+                </div>
+
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-primary transition">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="lg:hidden hidden bg-white border-t">
+            <nav class="container mx-auto px-4 py-4 space-y-3">
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-primary transition">О компании</a>
+                <a href="service.html" class="block py-2 text-primary font-medium">Услуги</a>
+                <a href="partners.html" class="block py-2 text-gray-700 hover:text-primary transition">Партнёры</a>
+                <a href="doc.html" class="block py-2 text-gray-700 hover:text-primary transition">Документы</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-primary transition">Контакты</a>
+                <a href="news.html" class="block py-2 text-gray-700 hover:text-primary transition">Новости</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary to-secondary">
+        <div class="container mx-auto px-4 lg:px-8">
+            <nav class="mb-6">
+                <ol class="flex items-center space-x-2 text-white/70 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition"><i class="fas fa-home"></i></a></li>
+                    <li><i class="fas fa-chevron-right text-xs"></i></li>
+                    <li><span class="text-white">Услуги</span></li>
+                </ol>
+            </nav>
+            <h1 class="font-heading font-bold text-4xl md:text-5xl text-white mb-4">Услуги</h1>
+            <p class="text-xl text-white/90 max-w-2xl">Полный комплекс экологических решений для вашего бизнеса</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <a href="fullcomplex.html" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/recycling.jpg" alt="Полный комплекс обращения с отходами" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-truck-moving text-primary text-xl"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-gray-900">Полный комплекс обращения с отходами</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Осуществляется на собственных объектах и с привлечением лицензированных партнёров</p>
+                        <span class="inline-flex items-center text-primary font-medium">
+                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Service 2 -->
+                <a href="agreement.html" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal" style="transition-delay: 0.1s;">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/documents.jpg" alt="Лицензионные соглашения" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-file-contract text-secondary text-xl"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-gray-900">Лицензионные соглашения</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">По использованию технологий утилизации отходов с государственной экологической экспертизой</p>
+                        <span class="inline-flex items-center text-secondary font-medium">
+                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Service 3 -->
+                <a href="supply.html" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal" style="transition-delay: 0.2s;">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/materials.jpg" alt="Поставка материальных ресурсов" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-boxes text-accent text-xl"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-gray-900">Поставка материальных ресурсов</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Доставка и комплексное снабжение щебнем, песком и другими нерудными материалами</p>
+                        <span class="inline-flex items-center text-accent font-medium">
+                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Service 4 -->
+                <a href="project.html" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal" style="transition-delay: 0.3s;">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/reclamation.jpg" alt="Реализация проектов" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-light/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-seedling text-light text-xl"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-gray-900">Реализация проектов</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">По ликвидации и рекультивации нарушенных земель полным циклом работ</p>
+                        <span class="inline-flex items-center text-light font-medium">
+                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">Процесс работы</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">От запроса к результату</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="process-step text-center reveal">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone-alt text-white"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold mb-2">Обращение заказчика</h4>
+                    <p class="text-gray-600 text-sm">Свяжитесь с нами удобным способом</p>
+                </div>
+
+                <div class="process-step text-center reveal" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-white"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold mb-2">Анализ отходов</h4>
+                    <p class="text-gray-600 text-sm">Проводим детальный анализ</p>
+                </div>
+
+                <div class="process-step text-center reveal" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-file-signature text-white"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold mb-2">Согласование</h4>
+                    <p class="text-gray-600 text-sm">Заключение договора</p>
+                </div>
+
+                <div class="process-step text-center reveal" style="transition-delay: 0.3s;">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-white"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold mb-2">Транспортирование</h4>
+                    <p class="text-gray-600 text-sm">Вывоз отходов</p>
+                </div>
+
+                <div class="process-step text-center reveal" style="transition-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cogs text-white"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold mb-2">Обработка</h4>
+                    <p class="text-gray-600 text-sm">Утилизация отходов</p>
+                </div>
+
+                <div class="process-step text-center reveal" style="transition-delay: 0.5s;">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check-double text-white"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold mb-2">Документы</h4>
+                    <p class="text-gray-600 text-sm">Полный пакет документов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center reveal">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mb-6">
+                    Нужна консультация?
+                </h2>
+                <p class="text-xl text-white/90 mb-8">
+                    Свяжитесь с нами для получения подробной информации о наших услугах
+                </p>
+                <a href="contact.html" class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-heading font-semibold rounded-lg hover:bg-orange-600 transition">
+                    <i class="fas fa-phone mr-2"></i>Связаться с нами
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                            <i class="fas fa-leaf text-white"></i>
+                        </div>
+                        <span class="font-heading font-bold text-xl">ЭкоТерра</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Транспортирование отходов III-V класса опасности и реализация проектов по ликвидации и рекультивации нарушенных земель.</p>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-6">Навигация</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">О компании</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-white transition">Услуги</a></li>
+                        <li><a href="partners.html" class="text-gray-400 hover:text-white transition">Партнёры</a></li>
+                        <li><a href="doc.html" class="text-gray-400 hover:text-white transition">Документы</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-6">Услуги</h3>
+                    <ul class="space-y-3">
+                        <li><a href="fullcomplex.html" class="text-gray-400 hover:text-white transition">Полный комплекс</a></li>
+                        <li><a href="agreement.html" class="text-gray-400 hover:text-white transition">Лицензионные соглашения</a></li>
+                        <li><a href="supply.html" class="text-gray-400 hover:text-white transition">Поставка материалов</a></li>
+                        <li><a href="project.html" class="text-gray-400 hover:text-white transition">Реализация проектов</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-6">Контакты</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-primary mt-1 mr-3"></i>
+                            <a href="tel:+79995433326" class="text-gray-400 hover:text-white transition">+7 (999) 543-33-26</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
+                            <a href="mailto:eco-terra-spb@yandex.ru" class="text-gray-400 hover:text-white transition">eco-terra-spb@yandex.ru</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">197198, г. Санкт-Петербург, проспект Добролюбова, 16</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">© 2025 ООО «ЭкоТерра». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/79995433326" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) element.classList.add('active');
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+</body>
+</html>

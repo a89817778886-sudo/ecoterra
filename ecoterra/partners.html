@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Партнёры | ЭкоТерра - Экологические решения</title>
+    <meta name="description" content="Наши партнёры и клиенты. ООО ЭкоТерра сотрудничает с ведущими компаниями в сфере строительства и экологии.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B5E20',
+                        secondary: '#2E7D32',
+                        light: '#4CAF50',
+                        accent: '#F57C00',
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #1B5E20; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="font-body text-gray-800 antialiased">
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading font-bold text-xl text-primary">ЭкоТерра</span>
+                        <p class="text-xs text-gray-500">Экологические решения</p>
+                    </div>
+                </a>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="about.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">О компании</a>
+                    <a href="service.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">Услуги</a>
+                    <a href="partners.html" class="nav-link font-heading font-medium text-primary transition">Партнёры</a>
+                    <a href="doc.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">Документы</a>
+                    <a href="contact.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">Контакты</a>
+                    <a href="news.html" class="nav-link font-heading font-medium text-gray-700 hover:text-primary transition">Новости</a>
+                </nav>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="tel:+79995433326" class="flex items-center space-x-2 text-primary hover:text-secondary transition">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-heading font-semibold">+7 (999) 543-33-26</span>
+                    </a>
+                </div>
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-primary transition">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden bg-white border-t">
+            <nav class="container mx-auto px-4 py-4 space-y-3">
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-primary transition">О компании</a>
+                <a href="service.html" class="block py-2 text-gray-700 hover:text-primary transition">Услуги</a>
+                <a href="partners.html" class="block py-2 text-primary font-medium">Партнёры</a>
+                <a href="doc.html" class="block py-2 text-gray-700 hover:text-primary transition">Документы</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-primary transition">Контакты</a>
+                <a href="news.html" class="block py-2 text-gray-700 hover:text-primary transition">Новости</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary to-secondary">
+        <div class="container mx-auto px-4 lg:px-8">
+            <nav class="mb-6">
+                <ol class="flex items-center space-x-2 text-white/70 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition"><i class="fas fa-home"></i></a></li>
+                    <li><i class="fas fa-chevron-right text-xs"></i></li>
+                    <li><span class="text-white">Партнёры</span></li>
+                </ol>
+            </nav>
+            <h1 class="font-heading font-bold text-4xl md:text-5xl text-white mb-4">Партнёры</h1>
+            <p class="text-xl text-white/90 max-w-2xl">Компании, с которыми мы сотрудничаем</p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «ДОПРОЕКТ»</h3>
+                </div>
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.05s;">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «ОСП»</h3>
+                </div>
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.1s;">
+                    <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «ДСК Лидер»</h3>
+                </div>
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.15s;">
+                    <div class="w-14 h-14 bg-light/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-light text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «МиК»</h3>
+                </div>
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «Вэйст-Транс»</h3>
+                </div>
+                <a href="https://www.geoizol.ru/contact/" target="_blank" class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.25s;">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-external-link-alt text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «УМ Геоизол»</h3>
+                </a>
+                <a href="https://sfera-stroy.org/" target="_blank" class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.3s;">
+                    <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-external-link-alt text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «Сфера - Строй»</h3>
+                </a>
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.35s;">
+                    <div class="w-14 h-14 bg-light/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-light text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «ЭкоВаст»</h3>
+                </div>
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.4s;">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «Энергостроительная компания»</h3>
+                </div>
+                <a href="https://www.velesstroy.com/" target="_blank" class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.45s;">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-external-link-alt text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «Велесстрой»</h3>
+                </a>
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.5s;">
+                    <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «ЕТТ»</h3>
+                </div>
+                <a href="https://tehnostroyltd.ru/" target="_blank" class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.55s;">
+                    <div class="w-14 h-14 bg-light/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-external-link-alt text-light text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «Технострой»</h3>
+                </a>
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.6s;">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «Минерал Инжиниринг»</h3>
+                </div>
+                <a href="https://spb-neo.ru/" target="_blank" class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.65s;">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-external-link-alt text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">АО «Невский экологический оператор»</h3>
+                </a>
+                <div class="card-hover bg-gray-50 rounded-xl p-6 reveal" style="transition-delay: 0.7s;">
+                    <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg">ООО «ЕвроХим Терминал Усть-Луга»</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center"><i class="fas fa-leaf text-white"></i></div>
+                        <span class="font-heading font-bold text-xl">ЭкоТерра</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Транспортирование отходов III-V класса опасности.</p>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-6">Навигация</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">О компании</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-white transition">Услуги</a></li>
+                        <li><a href="partners.html" class="text-gray-400 hover:text-white transition">Партнёры</a></li>
+                        <li><a href="doc.html" class="text-gray-400 hover:text-white transition">Документы</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-6">Услуги</h3>
+                    <ul class="space-y-3">
+                        <li><a href="fullcomplex.html" class="text-gray-400 hover:text-white transition">Полный комплекс</a></li>
+                        <li><a href="agreement.html" class="text-gray-400 hover:text-white transition">Лицензионные соглашения</a></li>
+                        <li><a href="supply.html" class="text-gray-400 hover:text-white transition">Поставка материалов</a></li>
+                        <li><a href="project.html" class="text-gray-400 hover:text-white transition">Реализация проектов</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-6">Контакты</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><i class="fas fa-phone text-primary mt-1 mr-3"></i><a href="tel:+79995433326" class="text-gray-400 hover:text-white transition">+7 (999) 543-33-26</a></li>
+                        <li class="flex items-start"><i class="fas fa-envelope text-primary mt-1 mr-3"></i><a href="mailto:eco-terra-spb@yandex.ru" class="text-gray-400 hover:text-white transition">eco-terra-spb@yandex.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">© 2025 ООО «ЭкоТерра». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/79995433326" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) element.classList.add('active');
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+</body>
+</html>
